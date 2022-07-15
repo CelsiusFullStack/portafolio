@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap');
+:root {
+    --color-beige: #fef2f2;
+    --color-orange: #f26440;
+    --color-green : #286f6c;
+    --color-gray: #adadad;
+    --color-ligth-gray:#eee;
+    --color-black:#000;
+    --color-white: #ffffff;
+    --color-ligth-green:rgb(172, 226, 203);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: var(--color-white);
+}
+
+
+
+.bold {
+    font-weight: 600;
+}
+
+.normal {
+    font-weight: 300;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.20em;
+    line-height: 1.2em;
+    gap: .1em;
+    font-size: 15px;
+    align-content: flex-start;
+    justify-content:flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: -10px;
+}
+
+.section-title span {
+    color: #fff;
+}
+.black {
+    color:var(--color-black)
+}
+
+.white {
+    color:var(--color-white)
+}
+header {
+    display: inline-flex;
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    background-color: var(--color-beige);
+    padding: 1.5em;
+    justify-content: flex-end;
+    z-index: 50;
+
+}
+
+.navbar {
+    position: absolute;
+    left: 4px;
+    top: 60px;
+    width: 100vw;
+}
+
+.navbar ul{
+
+    /*background-color: var(--color-beige) ;*/
+    background-color: rgba(255,255,255,0.96);
+    padding: 1em;
+    line-height: 2em;
+}
+
+.navbar-items {
+    list-style: none;
+}
+.color-home {
+ color: var(--color-green);   
+}
+
+a {
+    text-decoration: none;
+    color:var(--color-gray);
+    font-size: 10pxm;
+    word-spacing: 0.1m;
+    
+
+}
+
+a:hover {
+
+    text-decoration-style: var(--color-black);
+}
+
+
+.container {
+    margin-top: 60px;
+}
+
+main {
+    background-color: var(--color-beige);
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    height: 523px;
+    padding: 0m;
+    padding-bottom: 0;
+    width: 100vw;
+}
+
+.main-title {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    font-size: 52px;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.social-media {
+    grid-row: 2/4;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3em;
+  }
+
+.about-me {
+    position: relative;
+}
+.my-skills {
+    position: relative;
+    top: -250px;
+    margin-bottom: -250px;
+}
+
+.green {
+    background-color: var(--color-green);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+    left: -180px;
+}
+
+.orange {
+    background-color: var(--color-orange);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    top: -80px;
+    left: -10px;
+}
+.social-media__icon {
+    height: 3em;
+    width: 3em;
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media__icon:hover{
+    background-color:var(--color-ligth-green);
+    cursor: pointer;
+  }
+
+
+.personal-image {
+    
+    grid-column: 2/6;
+    grid-row: 2/4;
+    position: relative;
+    
+}
+
+.green-circle {
+    width: 228px;
+    height: 234px;
+    background-color: var(--color-green);
+    position: relative;
+    left: 89px;
+    bottom: -15px;
+    border-radius: 50%;
+  }
+  .personal-image img {
+    width: 59vw;
+    object-fit: fill;
+    position: absolute;
+    bottom: 1px;
+    left: 10px;
+  }
+
+article {
+    padding: 2.0em;
+    color: var(--color-gray);
+    font-size: 1em;
+}
+
+.section-title {
+    color: var(--color-green);
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.section-title-portfolio {
+    color: var(--color-green);
+    font-size: 2em;
+    font-weight: 600;
+    padding-left: 29px;
+  }
+
+article section:nth-child(2){
+    margin-top: 1em; 
+    /* background-color: red; */
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    position: relative; 
+    z-index: 20;
+}
+
+.skill {
+    background-color: var(--color-beige);
+    padding: .5em;
+    padding-top: 0;
+    width: 220px;
+    border-radius: 1em;
+    z-index: 100;
+}
+
+section {
+    margin-top: 1em;
+}
+
+.experience {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.experience div {
+    width: 250px;
+    height: 100%;
+    margin-bottom: 1em;
+}
+
+.experience div img{
+    width: 100%;
+}
+
+.experience div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-icon {
+    width: 100%;
+    fill: var(--color-orange);
+}
+
+.skill-icon {
+    width: 25px;
+    height:25px;
+    display: flex;
+   
+}
+
+.portfolio {
+    display:flex;
+    flex-direction: column;
+    margin-top: 2em;
+    background-color: var(--color-green);
+    height: 600px;
+    line-height: 2em;
+    position: relative;
+    right: 10px;
+}
+
+.first-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 1em;
+    margin: auto;
+    position: relative;
+    top: -60px;
+    border-radius: 1em;
+    left:5px;
+    
+}
+
+.first-image img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.second-image {
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 1em;
+    margin: auto;
+    position: relative;
+    bottom: -20px;
+    border-radius: 1em;
+    left:5px;
+}
+
+.second-image img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ml-p {
+    margin: 1em 2em;
+
+}
+
+.contacts {
+    justify-content: center;
+    margin-top: 250px;
+    position: relative;
+}
+
+
+.contacts-box {
+    display: flex;
+    width:90%;
+    gap: 1em;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    padding: 0;
+}
+
+.light-green {
+    height: 250px;
+    width: 250px;
+    background-color: var(--color-ligth-green);
+    border-radius: 50%;
+    position: relative;
+    left: -150px;
+    top: 22px;
+    display: flex;
+  }
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 1.5em;
+    position: relative;
+    top:70px;
+    width: 150px;
+    height: 35vh;
+
+    
+}
+
+
+
+.contact-icon {
+    height: 4em;
+    width: 4em;
+    background-color: var(--color-orange);
+    fill: #f26440;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 50%;
+}
+
+.contact-title {
+    color: var(--color-green);
+   
+}
+.copyright {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      color: var(--color-orange);
+      font-size: 1.0em;
+      font-weight: 1.5em;
+}
+
+@media screen and (min-width:1300px) {
+
+    body {
+        width: 100vw;
+    }
+    header {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+      
+    }
+
+    .navbar {
+        display: block;
+        position: fixed;
+        top: 0px; 
+    }
+
+    .hamburger-icon {
+        display: none;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 3em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        padding-right: 2em;
+        
+    }
+    
+    .social-media {
+        flex-direction: row;
+        margin: 1em;
+    }
+    .personal-image {
+        width: 450px;
+        position: absolute;
+        right: 200px;
+        bottom: 0;
+    }
+
+    .img {
+        display: flex;
+        width: 28vw;
+        height: 31vh;
+        object-fit: fill;
+        position: absolute;
+        top: -141px;
+        left: 103px;
+      }
+
+      .green-circle {
+        top: -124px;
+        left: 246px;
+        height: 317px;
+        width: 344px;
+      }
+
+    .skills {
+        flex-direction: row;
+        margin-top: 80px;
+    }
+
+    .skill {
+        background-color: var(--color-beige);
+        padding-top: 0;
+        margin: ;
+        width: 15px;
+        border-radius: 1em;
+        height: 370px;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-self:flex-start;
+        bottom: 110px;
+        gap: 5em;
+    }
+    .my-skills {
+        display: flex;
+        flex-direction:column;
+        height: 310px;
+        left: 100px;
+        width: 50vw;
+        left:505px;
+        top: 230px;
+        position: absolute;
+        align-content:space-between;
+        gap: 1em;
+        
+
+      }
+
+    .experiences {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:flex-start;
+        gap: 0.5em;
+       
+    }
+
+    .experience div {
+        width: 80px;
+        height: 100px;
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+     
+    }
+
+    .experience div:nth-child(2){
+        width: 100px;
+    }
+
+    .experience div:nth-child(3){
+        justify-content: center;
+        align-items: center;
+    }
+
+    .green {
+        background-color: var(--color-green);
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        position: relative;
+        top: 85px;
+        left: -135px;
+        display: flex;
+        flex-direction: column;
+        gap:113em;
+    }
+    
+    .orange {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-orange);
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        position: relative;
+        top: -90px;
+        left: 115px;
+        z-index: 1115;
+    }
+
+    .c_experiencia {
+         margin:  2em;
+    }
+
+    .first-image , .second-image{
+        width: 500px;
+    }
+
+    .first-image {
+        width: 100%;
+        display: flex;
+        align-content: flex-start;
+        position: relative;
+        left: 20px;
+        top:-20px;
+    }
+
+
+    .second-image {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        background-color: #fff;
+        padding: 1em;
+        margin: auto;
+        position: relative;
+        bottom: -20px;
+        border-radius: 1em;
+        left:220px;
+      }
+    
+    .title-portfolio {
+        position:absolute;
+        top: 35px;
+        align-content: flex-start;
+        left: 460px;
+    }
+    .sub-title-portfolio {
+        position:relative;
+        top: 12px;
+        right: 460px;
+        font-size: 132px;
+        font-weight: 300;
+        
+
+    }
+  
+    .contacts-box {
+        align-self: center;
+        margin: 0 auto;
+        width: 90vw;
+        gap: 16em;
+        justify-content: center;
+    }
+
+    .personal-image img {
+        width: 25vw;
+        height: 96vh;
+        object-fit:fill;
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+      }
+
+    .main {
+        padding: 4em;
+    }
+    .pp {
+        margin: 1em 0;
+
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+
+    body {
+        width: 97vw;
+    }
+    main {
+        position: relative;
+        width: 98.65vw;
+    }
+    header {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+      
+    }
+
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        background-color: var(--color-green);
+        height: 600px;
+        line-height: 2em;
+        position: relative;
+
+        left: 12px;
+      }
+
+    .navbar {
+        display: block;
+        position: fixed;
+        top: 0px; 
+    }
+
+    .hamburger-icon {
+        display: none;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 3em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+
+    }
+    
+    .social-media {
+        flex-direction: row;
+        margin: 1em;
+    }
+    .personal-image {
+        display: flex;
+        width: 400px;
+        position: absolute;
+        right: 150px;
+        bottom: 0;
+        top: 80px;
+        height: 50px;
+    }
+    .personal-image  img {
+        width: 26vw;
+        height: 40vh;
+        object-fit: fill;
+        position: absolute;
+        top: -216px;
+        left: 10px;
+      }
+
+    .green-circle {
+        top:-150px;
+        left: 150px;
+        height: 350px;
+        width: 350px;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: row;
+        margin-top: 80px;
+        align-content: space-between;
+        gap: 3em;
+    }
+
+    .skill {
+        width: 350px;
+    }
+    .my-skills {
+        display: flex;
+    }
+
+    .experiences {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+       
+    }
+
+    .experience div {
+        width: 80px;
+        height: 100px;
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+      
+    }
+
+    .experience div:nth-child(2){
+        width: 100px;
+    }
+
+    .experience div:nth-child(3){
+        justify-content: center;
+        align-items: center;
+    }
+
+    .c_experiencia {
+        /* background-color: red; */
+        margin:  2em;
+    }
+
+    .first-image , .second-image{
+        width: 400px;
+    }
+
+    .first-image {
+        position:absolute;
+        left: 10px;
+    }
+
+    .second-image {
+        position: absolute;
+        right:-590px;
+        bottom: -52px;
+    }
+    
+    
+    .title-portfolio {
+        position:absolute;
+        top: 35px;
+        align-content: flex-start;
+        left: 460px;
+    }
+    .sub-title-portfolio {
+        position:absolute;
+        top: 35px;
+        align-content: flex-start;
+        left: 1460px;
+        font-size: 32px;
+        font-weight: 300;
+
+    }
+  
+    .contacts-box {
+        align-self: center;
+        margin: 0 auto;
+        width: 100%;
+        gap: 16em;
+        justify-content: center;
+    }
+    .personal-image img {
+        width: 25vw;
+        height: 80vh;
+        object-fit:fill;
+        position: absolute;
+        top: -200px;
+        left: 10px;
+      }
+    .main {
+        padding: 0;
+        width: 100vw;
+    }
+
+}
